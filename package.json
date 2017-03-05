@@ -1,0 +1,34 @@
+{
+  "name": "bedel-api",
+  "version": "0.1.0",
+  "description": "The bedel api, for the client-side, bedel apps and the server side.",
+  "main": "index.js",
+  "scripts": {
+    "coveralls": "istanbul cover -x app/util/logger.js ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gum-Joe/bedel-api.git"
+  },
+  "keywords": [
+    "bedel",
+    "js",
+    "es6",
+    "bedel-api",
+    "api"
+  ],
+  "author": "Gum-Joe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gum-Joe/bedel-api/issues"
+  },
+  "homepage": "https://github.com/Gum-Joe/bedel-api#readme",
+  "devDependencies": {
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.2.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "webpack": "^2.2.1"
+  }
+}

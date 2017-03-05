@@ -1,0 +1,27 @@
+# Travis config
+language: node_js
+# Versions
+node_js:
+  - stable
+  - "6"
+  - "6.1"d
+# services
+services:
+  - mongodb
+# ENV
+env:
+  global:
+    - NODE_ENV=development
+# Scripts
+install: npm install
+script: npm test
+after_script: npm run coveralls
+
+# Notifications
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/d9edfe2f0448dfc8a49b
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: always     # options: [always|never|change] default: always
