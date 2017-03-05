@@ -4,7 +4,7 @@ language: node_js
 node_js:
   - stable
   - "6"
-  - "6.1"d
+  - "6.1"
 # services
 services:
   - mongodb
