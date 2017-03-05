@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Gum-Joe/bedel-api#readme",
   "devDependencies": {
+    "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.2.0",
     "babel-preset-react": "^6.23.0",
