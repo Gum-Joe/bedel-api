@@ -28,6 +28,7 @@
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
+    "babel-plugin-istanbul": "^4.0.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.0",
     "babel-preset-react": "^6.23.0",
