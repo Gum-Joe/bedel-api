@@ -2,10 +2,11 @@
   "name": "bedel-api",
   "version": "0.1.0",
   "description": "The bedel api, for the client-side, bedel apps and the server side.",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "coveralls": "istanbul cover -x app/util/logger.js ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "test": "mocha"
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "mocha",
+    "coverage": "nyc ./node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,24 @@
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^3.2.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "socket.io": "^1.7.3"
   }
 }

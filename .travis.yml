@@ -11,9 +11,10 @@ services:
 # ENV
 env:
   global:
-    - NODE_ENV=development
+    - NODE_ENV=test
 # Scripts
-install: npm install
+install: NODE_ENV=development npm install
+before_script: node_modules/.bin/gulp compile
 script: npm test
 after_script: npm run coveralls
 
