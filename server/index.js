@@ -12,9 +12,10 @@ import chalk from "chalk";
  * @param plugins {Array} Array of plugins and extra API methods
  */
 export class ServerAPI {
-  constructor(logger, server, plugins = []) {
+  constructor(logger, server, app, plugins = []) {
     this.logger = logger;
     this.server = server;
+    this.express = app;
     this.raw = {};
     this.raw.plugins = plugins;
     this.logger.prefix = chalk.yellow("API");

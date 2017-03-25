@@ -31,7 +31,7 @@ describe("Server Test", () => {
 
   // Check for plugins
   for (let plugin of plugins) {
-    it(`shoudl check for plugin ${plugin.name} (prop: ${plugin.prop})`, (done) => {
+    it(`should check for plugin ${plugin.name} (prop: ${plugin.prop})`, (done) => {
       expect(API).to.have.property(plugin.prop);
       done();
     });
