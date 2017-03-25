@@ -2,7 +2,7 @@
 const client = require("./client");
 const { ServerAPI } = require("./server");
 
-export default {
+module.exports = {
   client,
   ServerAPI
 };
